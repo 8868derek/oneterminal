@@ -32,26 +32,25 @@ Text, code, images, video — configure once, produce instantly.
 
 ## What is One Terminal?
 
-One Terminal is a **native macOS desktop app** that turns AI into a real production tool — not just a chatbot. 
+One Terminal is a **native macOS desktop app** built for people who want AI to **actually produce results** — not just answer questions.
 
-Give it a task; it reads files, writes code, runs commands, searches the web, generates images, and delivers results. It's a **multimodal AI agent** that actually gets things done.
+Give it a goal. It reads your codebase, writes code, runs commands, searches the web, generates images, and delivers finished work. Then it **remembers what it learned** and shares knowledge with your team.
 
-### Not another AI chat wrapper.
+**Three pillars:**
 
-Most AI tools are glorified chat windows. One Terminal is different:
-
-- 🧠 **Agent Mode** — Give it a goal, it autonomously plans and executes: reads your codebase, writes code, runs tests, iterates until done
-- 💬 **Chat Mode** — When you just want to talk, it's there too
-- 📁 **Workspace-aware** — Understands your project structure, files, and context
-- 🔧 **30+ built-in tools** — File I/O, shell commands, web search, image analysis, and more
-- 🔌 **Extensible** — Create custom tools, skills, and specialist agents
-- 🏢 **Enterprise-ready** — Connect to [Zero Terminal](https://oterminal-web.zeabur.app) for team task dispatch
+> 🎯 **Produce** — Multimodal AI agent that handles text, code, image, and video tasks autonomously
+>
+> 👥 **Connect** — Built-in community, contacts, and encrypted real-time messaging
+>
+> 🧠 **Learn** — Every task makes both you and the AI smarter through Learning Trail
 
 <br />
 
 ## Features
 
-### 🎯 Multimodal Production Line
+### 🎯 Multimodal Production
+
+One person does the work of four. Text, code, image, video — one production line.
 
 <table>
 <tr>
@@ -62,16 +61,11 @@ Most AI tools are glorified chat windows. One Terminal is different:
 </tr>
 </table>
 
-### ⚡ How It Works
-
-| Step | What happens |
-|------|-------------|
-| **01 — Chat or Command** | Chat mode for conversation, Agent mode for tasks. OT figures out the approach. |
-| **02 — Action, Not Talk** | Read files, write code, run commands, search the web — say what, get it done. |
-| **03 — Gets Smarter** | Knowledge vault auto-accumulates. Project docs auto-update. Every task makes OT smarter. |
-| **04 — Enterprise Sync** | Connect Zero Terminal — CEO dispatches tasks → OT auto-executes → results sync in real-time. |
-
-<br />
+**How it works:**
+- You describe a task → the Agent **plans, executes, and delivers**
+- 30+ built-in tools: file I/O, shell, web search, image analysis, browser automation
+- Workspace-aware: understands your project structure, files, and dependencies
+- Multi-agent delegation: specialist agents work in parallel on complex tasks
 
 <div align="center">
 
@@ -83,13 +77,40 @@ Most AI tools are glorified chat windows. One Terminal is different:
 
 <br />
 
+---
+
+### 👥 Social — Community & Encrypted Messaging
+
+One Terminal isn't a lonely tool. It has people inside.
+
+- **Community** — Share skills, post workflows, discover plugins, upvote useful content
+- **Contacts** — Add friends, send direct messages in real-time
+- **Ephemeral Messaging** — Messages are deleted from the server the moment they're delivered. No logs, no history on our end
+- **Enterprise Sync** — Connect [Zero Terminal](https://oterminal-web.zeabur.app) for CEO → team task dispatch with real-time results
+
+<div align="center">
+
+<img src="assets/screenshots/contacts.png" width="380" alt="Contacts & Encrypted Messaging" />
+&nbsp;&nbsp;
+<img src="assets/screenshots/community.png" width="380" alt="Community" />
+
+<sub><strong>Left:</strong> Real-time encrypted messaging &nbsp;|&nbsp; <strong>Right:</strong> Community — share skills & workflows</sub>
+
+</div>
+
+<br />
+
+---
+
 ### 🧠 Learning Trail — You Get Smarter Too
 
-AI's real value isn't doing work for you — it's making **you** smarter with every interaction.
+Most AI tools make you **dependent**. One Terminal makes you **stronger**.
 
-- **📖 Learning Trail** — Every theory, data source, and reference the Agent uses — auto-tagged, auto-recorded
-- **📓 Study Notes** — Pin valuable references, add your notes. What the Agent teaches stays with you
-- **🧠 Compound Cognition** — Every task teaches you something new. Not a productivity tool — a knowledge partner
+Every task the Agent performs generates a trail of knowledge — and it's yours to keep.
+
+- **📖 Learning Trail** — Every theory, data source, and reference the Agent uses — auto-tagged, auto-recorded. Not search results — a traceable knowledge path
+- **📓 Study Notes** — Pin valuable references with one click, add your understanding. What the Agent teaches you stays forever
+- **🧠 Compound Cognition** — Every task teaches you something new. Your Agent doesn't just do things — it helps you build a knowledge system
 
 <div align="center">
 
@@ -99,52 +120,33 @@ AI's real value isn't doing work for you — it's making **you** smarter with ev
 
 <br />
 
+---
+
 ### 🔒 Privacy First
 
 - All data stored **locally on your machine**
-- Bring your own API keys — no middleman
-- No cloud dependency, no tracking
-- E2E encrypted messaging between contacts
-
-### 👥 Built-in Community & Messaging
-
-<div align="center">
-
-<img src="assets/screenshots/contacts.png" width="380" alt="Contacts & Messaging" />
-&nbsp;&nbsp;
-<img src="assets/screenshots/community.png" width="380" alt="Community" />
-
-</div>
+- Bring your own API keys — no middleman, no subscription
+- No cloud dependency, no tracking, no telemetry
+- Messages: E2E encrypted, deleted on delivery
 
 <br />
 
 ## Architecture
 
-One Terminal is built with:
-
-- **Frontend**: React + TypeScript
-- **Backend**: Rust (Tauri v2)
-- **AI Orchestrator**: Custom agent loop with context management, tool execution, and multi-agent delegation
-- **Database**: SQLite (local)
-- **Messaging**: WebSocket (real-time, ephemeral)
-
-### Core Engine
-
 ```
-User Input → Orchestrator → Agent Loop → Tool Execution → Result
+User Goal → Orchestrator → Agent Loop → Tool Execution → Delivered Result
                 ↑                              ↓
           Context Management          30+ Tools (parallel + serial)
-          (micro/full compaction)     (hooks, sandboxing, git tracking)
+          (auto-compaction)           (hooks, sandboxing, git tracking)
 ```
 
-Key capabilities of the orchestrator:
-- **Context Management**: Automatic micro-compaction and LLM-based checkpoint compaction
-- **Tool Execution**: 4-phase pipeline (pre-process → parallel readonly → serial write → delegation)
-- **Multi-Agent**: Specialist agents with parallel delegation via `tokio::spawn`
-- **AST-aware Editing**: tree-sitter fallback for code edits (Rust, JS/TS, Python, Go)
-- **Git Integration**: Auto-checkpoint per iteration, task completion tags
-- **LSP Integration**: Multi-language diagnostics and code intelligence
-- **Hook Pipeline**: Security audit + workspace isolation + result truncation
+Built with **Rust** (Tauri v2) + **React** + **SQLite**. Key internals:
+
+- **4-phase tool pipeline**: pre-process → parallel readonly → serial write → multi-agent delegation
+- **AST-aware editing**: tree-sitter fallback for Rust, JS/TS, Python, Go
+- **Git integration**: auto-checkpoint per iteration, task completion tags
+- **LSP integration**: multi-language diagnostics and code intelligence
+- **Context management**: automatic compaction with model-specific thresholds
 
 <br />
 
@@ -153,15 +155,13 @@ Key capabilities of the orchestrator:
 | | Individual | Enterprise |
 |---|---|---|
 | **Price** | **$0** — Free forever | Custom pricing |
-| AI capabilities | ✅ All (bring your API key) | ✅ All |
-| Multimodal: text/code/image/video | ✅ | ✅ |
+| Multimodal production | ✅ Text, code, image, video | ✅ |
 | Auto-learning knowledge vault | ✅ | ✅ |
-| Community plugin sharing | ✅ | ✅ |
-| Real-time messaging | ✅ | ✅ |
+| Community & plugin sharing | ✅ | ✅ |
+| Encrypted real-time messaging | ✅ | ✅ |
 | Zero Terminal admin dashboard | — | ✅ |
 | CEO → team task dispatch | — | ✅ |
 | Team output tracking & reports | — | ✅ |
-| Measurable ROI dashboard | — | ✅ |
 
 <br />
 
@@ -215,11 +215,13 @@ One Terminal is **proprietary software**. Free for individual use. See [LICENSE]
 
 **一个窗口，全部生产力。**
 
-不是又一个 AI 聊天框，而是你的**多模态 AI 生产终端**。
+不是又一个 AI 工具，而是你的**多模态 AI 生产终端**。
 
 文字、代码、图片、视频 — 配好即用，协同即产出。
 
-### 核心能力
+### 三大核心
+
+#### 🎯 多模态生产
 
 | 模态 | 描述 |
 |------|------|
@@ -228,16 +230,22 @@ One Terminal is **proprietary software**. Free for individual use. See [LICENSE]
 | 🖼 **图片** | AI 生成、截图分析、设计素材 — 视觉内容随需而生 |
 | 🎬 **视频** | 脚本、字幕、剪辑自动化 — 多媒体生产全链覆盖 |
 
-### 有小莓，莓问题 🍓
+#### 👥 社交
 
-- **01 — 对话或指令**：Chat 模式随便聊，Agent 模式下达任务。小莓自动判断该怎么做
-- **02 — 行动，不废话**：读文件、写代码、跑命令、搜网页 — 你说做什么，它直接做完交付
-- **03 — 越用越聪明**：知识库自动积累经验，项目文档自动更新。每一次任务都让小莓更懂你
-- **04 — 企业协同就绪**：连接 Zero Terminal，CEO 下发任务 → 小莓自动执行 → 结果实时回传
+- **社区** — 分享技能、交流工作流、发现社区插件
+- **联系人** — 添加好友，实时消息通讯
+- **阅后即焚** — 消息送达即从服务器删除，不留存
+- **企业协同** — 连接 Zero Terminal，CEO 下发任务 → 小莓自动执行 → 结果实时回传
+
+#### 🧠 学习
+
+- **来时路 (Learning Trail)** — Agent 用到的理论、数据源、延伸阅读，自动标记、自动记录
+- **学习笔记** — 一键收藏有价值的参考，加上你的理解。Agent 教你的不会忘
+- **认知复利** — 每次任务都让你多懂一点。不是效率工具，是知识伙伴
 
 ### 定价
 
 - **个人版**：¥0，永久免费。自带 API Key，无订阅，无追踪，数据不出本地
-- **企业版**：按需定价。连接 Zero Terminal 获得团队协同、任务派发、产出追踪、ROI 仪表盘
+- **企业版**：按需定价。连接 Zero Terminal 获得团队协同、任务派发、产出追踪
 
 ### [⬇️ 下载 macOS 版](https://oterminal-web.zeabur.app/api/download)
