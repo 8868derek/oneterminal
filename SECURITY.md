@@ -15,7 +15,7 @@ If you discover a security vulnerability in One Terminal, please report it respo
 ## Scope
 
 - One Terminal desktop application
-- One Terminal web platform (oneterminal.zeabur.app)
+- One Terminal web platform (oterminal-web.zeabur.app)
 - Community API endpoints
 
 ## Data Privacy

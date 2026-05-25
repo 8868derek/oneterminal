@@ -10,9 +10,9 @@
 
 Text, code, images, video — configure once, produce instantly.
 
-[![Download](https://img.shields.io/badge/Download-macOS_DMG-F59E0B?style=for-the-badge&logo=apple&logoColor=white)](https://oneterminal.zeabur.app/api/download)
-[![Website](https://img.shields.io/badge/Website-oneterminal.zeabur.app-18181B?style=for-the-badge&logo=safari&logoColor=white)](https://oneterminal.zeabur.app)
-[![Community](https://img.shields.io/badge/Community-Join_Us-10B981?style=for-the-badge&logo=discourse&logoColor=white)](https://oneterminal.zeabur.app/community)
+[![Download](https://img.shields.io/badge/Download-macOS_DMG-F59E0B?style=for-the-badge&logo=apple&logoColor=white)](https://oterminal-web.zeabur.app/api/download)
+[![Website](https://img.shields.io/badge/Website-oterminal--web.zeabur.app-18181B?style=for-the-badge&logo=safari&logoColor=white)](https://oterminal-web.zeabur.app)
+[![Community](https://img.shields.io/badge/Community-Join_Us-10B981?style=for-the-badge&logo=discourse&logoColor=white)](https://oterminal-web.zeabur.app/community)
 
 ---
 
@@ -45,7 +45,7 @@ Most AI tools are glorified chat windows. One Terminal is different:
 - 📁 **Workspace-aware** — Understands your project structure, files, and context
 - 🔧 **30+ built-in tools** — File I/O, shell commands, web search, image analysis, and more
 - 🔌 **Extensible** — Create custom tools, skills, and specialist agents
-- 🏢 **Enterprise-ready** — Connect to [Zero Terminal](https://zeroterminal.com) for team task dispatch
+- 🏢 **Enterprise-ready** — Connect to [Zero Terminal](https://oterminal-web.zeabur.app) for team task dispatch
 
 <br />
 
@@ -169,7 +169,7 @@ Key capabilities of the orchestrator:
 
 <div align="center">
 
-### [⬇️ Download for macOS (Apple Silicon)](https://oneterminal.zeabur.app/api/download)
+### [⬇️ Download for macOS (Apple Silicon)](https://oterminal-web.zeabur.app/api/download)
 
 macOS 12+ · Apple Silicon (M1/M2/M3/M4) · ~15MB
 
@@ -181,7 +181,7 @@ macOS 12+ · Apple Silicon (M1/M2/M3/M4) · ~15MB
 
 - 💬 [**Discussions**](https://github.com/8868derek/oneterminal/discussions) — Ask questions, share workflows, request features
 - 🐛 [**Issues**](https://github.com/8868derek/oneterminal/issues) — Report bugs
-- 🌐 [**Web Community**](https://oneterminal.zeabur.app/community) — Share skills, discover plugins
+- 🌐 [**Web Community**](https://oterminal-web.zeabur.app/community) — Share skills, discover plugins
 
 <br />
 
@@ -199,7 +199,7 @@ One Terminal is **proprietary software**. Free for individual use. See [LICENSE]
 
 <br />
 
-**[Website](https://oneterminal.zeabur.app)** · **[Download](https://oneterminal.zeabur.app/api/download)** · **[Community](https://oneterminal.zeabur.app/community)**
+**[Website](https://oterminal-web.zeabur.app)** · **[Download](https://oterminal-web.zeabur.app/api/download)** · **[Community](https://oterminal-web.zeabur.app/community)**
 
 </div>
 
@@ -240,4 +240,4 @@ One Terminal is **proprietary software**. Free for individual use. See [LICENSE]
 - **个人版**：¥0，永久免费。自带 API Key，无订阅，无追踪，数据不出本地
 - **企业版**：按需定价。连接 Zero Terminal 获得团队协同、任务派发、产出追踪、ROI 仪表盘
 
-### [⬇️ 下载 macOS 版](https://oneterminal.zeabur.app/api/download)
+### [⬇️ 下载 macOS 版](https://oterminal-web.zeabur.app/api/download)
